@@ -1,0 +1,26 @@
+spring:
+  mvc:
+    format:
+      date: dd-MM-yyyy
+  profiles:
+    active: prod
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/DKR-TAREFAS-DB01
+    username: api
+    password: spring@123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: false
+    show-sql: false
+
+server:
+  port: 8080
+  servlet:
+    context-path: /tarefas-api
+    application-display-name: TarefasAPI
+
+
